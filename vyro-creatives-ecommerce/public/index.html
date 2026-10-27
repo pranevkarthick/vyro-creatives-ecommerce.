@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#09070d"/>
+  <meta name="description" content="Vyro Creatives — posters, brand identity and digital design."/>
+  <title>Vyro Creatives — Unleash the Visual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css"/>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script defer src="/app.js"></script>
+</head>
+<body>
+<header class="header"><div class="container nav">
+  <a class="brand" href="#"><span class="brand-mark">V<span>.</span></span><span>VYRO <small>CREATIVES</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+  <nav id="mainNav"><a href="#services">Services</a><a href="#shop">Shop</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></nav>
+  <div class="nav-actions"><button class="outline-button" id="trackOrderButton">Track order</button><button class="outline-button" id="accountButton">Sign in</button><button class="button" id="cartButton">Cart <span id="cartCount">0</span></button></div>
+</div></header>
+<main>
+<section class="hero"><div class="grid-bg"></div><div class="container hero-layout"><div class="hero-copy">
+  <div class="eyebrow"><span class="pulse"></span> INDEPENDENT CREATIVE STUDIO</div>
+  <h1>Your vision.<br><span>Unleashed.</span></h1>
+  <p>We turn ideas into scroll-stopping visuals. Premium posters, brand identities and digital creatives designed to make your brand impossible to ignore.</p>
+  <div class="hero-actions"><a class="button" href="#shop">Explore designs ↗</a><button class="outline-button" id="customOrderButton">Request custom design</button></div>
+  <div class="proof"><span class="proof-icon">✦</span><div><strong>Made for your next big idea</strong><small>Custom design · Personalised service</small></div></div>
+</div><div class="hero-art"><div class="art-note">VISUAL CULTURE / 001</div><div class="poster poster-back">MAKE<br>IT<br><b>MATTER.</b><small>CREATIVE DIRECTION / 2026</small></div><div class="poster poster-front"><small>VC—026 / DESIGN SERIES</small><div class="sun"></div><h2>CREATE<br><em>WITHOUT</em><br>LIMITS.</h2><footer>VYRO CREATIVES <span>UNLEASH THE VISUAL</span></footer></div><div class="art-caption">✦ DESIGN THAT GETS NOTICED</div></div></div><div class="hero-strip"><span>DESIGN / IDENTITY / STORY</span><span>MADE WITH INTENTION ✦</span></div></section>
+<section class="section container" id="services"><div class="section-heading"><div class="eyebrow">WHAT WE CREATE</div><h2>Small brief.<br><span>Big visual energy.</span></h2><p>Creative design for people, events and brands with something to say.</p></div><div class="service-grid">
+<article class="service-card"><div class="service-icon">✳</div><small>01 / POSTERS</small><h3>Posters & campaigns</h3><p>Cinematic posters, event announcements and launches built to stop the scroll.</p><a href="#shop">Explore posters ↗</a></article>
+<article class="service-card"><div class="service-icon">◇</div><small>02 / IDENTITY</small><h3>Brand identity</h3><p>Logo concepts and visual systems that give your brand a memorable signature.</p><a href="#shop">Explore branding ↗</a></article>
+<article class="service-card"><div class="service-icon">↗</div><small>03 / DIGITAL</small><h3>Digital creatives</h3><p>Banners, social graphics and promotional assets with a clear message.</p><a href="#shop">Explore creatives ↗</a></article>
+</div></section>
+<section class="section container" id="shop"><div class="section-heading"><div class="eyebrow">THE DESIGN SHELF</div><h2>Find your next<br><span>signature visual.</span></h2><p>Choose a starting point, then tell us how to make it yours.</p></div>
+<div class="shop-toolbar"><div id="categories" class="categories"></div><input id="productSearch" class="search" placeholder="Search designs…"/></div><div id="productGrid" class="product-grid"><div class="loading">Loading designs…</div></div></section>
+<section class="section portfolio-section container" id="portfolio"><div class="section-heading"><div class="eyebrow">SELECTED VISUALS</div><h2>Ideas in a different<br><span>light.</span></h2><p>A glimpse of the bold, modern visual language we love.</p></div><div class="portfolio-grid"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=85" alt="Design moodboard"><img src="https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=900&q=85" alt="Colorful design"><img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=85" alt="Event design"></div></section>
+<section class="contact-section" id="contact"><div class="container contact-inner"><div><div class="eyebrow">HAVE AN IDEA?</div><h2>Let's make it<br><span>impossible to ignore.</span></h2><p>Tell us what you're imagining. We'll help turn it into a visual.</p></div><div class="contact-actions"><button class="button" id="contactOrderButton">Start your brief ↗</button><a class="outline-button" href="https://www.instagram.com/" target="_blank" rel="noreferrer">◎ Message on Instagram</a><small>Update this link to your Instagram profile before launch.</small></div></div></section>
+</main>
+<footer class="footer"><div class="container footer-top"><div><a class="brand" href="#"><span class="brand-mark">V<span>.</span></span><span>VYRO <small>CREATIVES</small></span></a><p>Independent creative studio for bold ideas and memorable visuals.</p></div><div><small>EXPLORE</small><a href="#shop">Shop designs</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></div><div><small>ACCOUNT</small><button id="footerAccount">Sign in / Register</button><button id="footerAdmin">Admin dashboard</button></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Vyro Creatives</span><span>UNLEASH THE VISUAL <b>✦</b></span></div></footer>
+<div id="modalRoot"></div><div id="toast" class="toast" role="status"></div>
+</body></html>
