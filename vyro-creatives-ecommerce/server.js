@@ -199,6 +199,13 @@ app.post('/api/auth/login', async (req,res) => {
 app.post('/api/auth/logout', (req,res) => req.session.destroy(() => { res.clearCookie('connect.sid'); res.json({ok:true}); }));
 app.get('/api/auth/me', (req,res) => res.json({user:currentUser(req)}));
 
+// Public checkout list: only active, usable referral codes are exposed.
+app.get('/api/referrals', (req,res) => {
+  const rows = db.prepare(`SELECT code, discount_percent AS discountPercent FROM referrals WHERE active=1 AND (max_uses IS NULL OR uses < max_uses) ORDER BY code`).all();
+  res.set('Cache-Control','no-store');
+  res.json(rows);
+});
+
 app.get('/api/referrals/validate/:code', (req,res) => {
   const r = db.prepare('SELECT * FROM referrals WHERE code=? COLLATE NOCASE AND active=1').get(req.params.code.trim());
   if (!r || (r.max_uses !== null && r.uses >= r.max_uses)) return res.status(404).json({error:'Referral code is not valid.'});
